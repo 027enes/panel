@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+[x-cloak] { 
+    display: none !important; 
+}
+.tox .tox-promotion-link,
+.tox-statusbar{
+    display: none !important;
+}
+.tox-edit-area{
+    cursor: text !important;
+}

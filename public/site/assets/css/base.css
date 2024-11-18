@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.project-active {
+    @apply mi-transform mi-transition-transform mi-duration-300 mi-ease-in-out lg:-mi-translate-y-4 lg:hover:-mi-translate-y-5
+}
+.projects_details_banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #000000, #000000)
+
+}
+.footer-bg-gradient {
+    background-image: linear-gradient(to right bottom, #5e4027, #5e4027, #5e4027, #352113)
+}

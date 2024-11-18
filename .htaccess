@@ -1,0 +1,29 @@
+RewriteEngine On
+RewriteBase /hoylu/
+
+# Panel ana dizin yönlendirmesi - bu kural en üstte olmalı
+RewriteRule ^$ index.php [R=301,L]
+
+RewriteRule ^panel/?$ panel/login.php [R=301,L]
+
+# Panel sayfaları için yönlendirme
+RewriteRule ^panel/index\.php$ src/Panel/Models/index.php [L]
+RewriteRule ^panel/login\.php$ src/Panel/Models/login.php [L]
+RewriteRule ^panel/products\.php$ src/Panel/Models/products.php [L]
+RewriteRule ^panel/users\.php$ src/Panel/Models/users.php [L]
+RewriteRule ^panel/categories\.php$ src/Panel/Models/categories.php [L]
+RewriteRule ^panel/about\.php$ src/Panel/Models/about.php [L]
+RewriteRule ^panel/contact\.php$ src/Panel/Models/contact.php [L]
+
+# Panel controller yönlendirmeleri
+RewriteRule ^panel/products_creative\.php$ src/Panel/Controllers/products_creative.php [L]
+RewriteRule ^panel/users_update\.php$ src/Panel/Controllers/users_update.php [L]
+RewriteRule ^panel/categories_delete\.php$ src/Panel/Controllers/categories_delete.php [L]
+RewriteRule ^panel/categories_creative\.php$ src/Panel/Controllers/categories_creative.php [L]
+RewriteRule ^panel/products_edit\.php$ src/Panel/Controllers/products_edit.php [L]
+RewriteRule ^panel/search_products\.php$ src/Panel/Controllers/search_products.php [L]
+RewriteRule ^panel/users_delete\.php$ src/Panel/Controllers/users_delete.php [L]
+
+# Site yönlendirmeleri
+RewriteRule ^hakkimizda\.php$ src/Site/Models/hakkimizda.php [L]
+RewriteRule ^iletisim\.php$ src/Site/Models/iletisim.php [L]
